@@ -6,6 +6,9 @@ this is distributed real-time chat with nestjs and IPFS protocol
 
 ```
 cd realtime-chat-ipfs-nestjs
+sudo snap install ipfs
+ipfs init
+ipfs daemon
 docker-compose up -d --build
 ```
 
