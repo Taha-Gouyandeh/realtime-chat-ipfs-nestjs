@@ -3,8 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ChatGateway } from './chat/chat.gateway';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { UserService } from './user/user.service';
 import { UserModule } from './user/user.module';
+import { ChatModule } from './chat/chat.module';
 
 @Module({
   imports: [
@@ -19,8 +19,9 @@ import { UserModule } from './user/user.module';
       synchronize: true,
     }),
     UserModule,
+    ChatModule,
   ],
   controllers: [AppController],
-  providers: [AppService, ChatGateway, UserService],
+  providers: [AppService, ChatGateway],
 })
 export class AppModule {}

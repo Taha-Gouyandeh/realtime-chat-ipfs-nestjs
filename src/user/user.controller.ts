@@ -20,9 +20,9 @@ export class UserController {
   findAll(
     @Query('page') page: number = 1,
     @Query('limit') limit: number = 10,
-    @Query('phone') user_name: string,
+    @Query('phone') username: string,
   ) {
-    return this.userService.findAll(page, limit, user_name);
+    return this.userService.findAll(page, limit, username);
   }
 
   @Get(':id')

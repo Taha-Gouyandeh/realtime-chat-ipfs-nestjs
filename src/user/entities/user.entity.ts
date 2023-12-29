@@ -6,11 +6,11 @@ export class User {
   id: string;
 
   @Column({ unique: true, nullable: false })
-  user_name: string;
+  username: string;
 
   @Column({ unique: false, nullable: false })
   password: string;
 
-  @Column({ type: 'timestamptz', default: () => 'CURRENT_TIMESTAMP' })
+  @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
   created_at: string;
 }
